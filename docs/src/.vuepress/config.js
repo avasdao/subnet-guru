@@ -34,12 +34,12 @@ module.exports = {
     lastUpdated: false,
     nav: [
       {
-        text: 'For Users',
-        link: '/users/',
+        text: 'For Builders',
+        link: '/builders/',
       },
       {
-        text: 'For Devs',
-        link: '/devs/'
+        text: 'For Operators',
+        link: '/nodes/'
       },
       {
         text: 'Open Guru',
@@ -47,9 +47,9 @@ module.exports = {
       }
     ],
     sidebar: {
-      '/devs/': [
+      '/builders/': [
         {
-          title: 'Developer Guide',
+          title: 'Builders Guide',
           collapsable: false,
           children: [
             '',
@@ -57,9 +57,9 @@ module.exports = {
           ]
         }
       ],
-      '/users/': [
+      '/nodes/': [
         {
-          title: 'User Guide',
+          title: 'Node Operators Guide',
           collapsable: false,
           children: [
             '',
