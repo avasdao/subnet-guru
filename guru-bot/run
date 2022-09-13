@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-rustc src/$1.rs -o bin/$1 && bin/$1
+rustc src/$1.rs -o bin/$1 && bin/$1 $2 $3

@@ -7,6 +7,12 @@ fn main() {
     /* Welcome banner. */
     welcome_banner();
 
+    let pattern = std::env::args().nth(1).expect("no pattern given");
+    let path = std::env::args().nth(2).expect("no path given");
+
+    println!("Pattern : {}", pattern);
+    println!("Path    : {}\n", path);
+
     // let a = 100;
     // let b = 200;
     // println!("\nResult is {}", a + b);
