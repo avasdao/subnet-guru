@@ -1,3 +1,11 @@
+// TODO Add libraries here.
+
+struct Cli {
+    pattern: String,
+    path: std::path::PathBuf,
+}
+
+
 /**
  * Main
  * 
@@ -7,8 +15,8 @@ fn main() {
     /* Welcome banner. */
     welcome_banner();
 
-    let pattern = std::env::args().nth(1).expect("no pattern given");
-    let path = std::env::args().nth(2).expect("no path given");
+    let pattern = std::env::args().nth(1).expect("Oops! You MUST provide a pattern to search.");
+    let path = std::env::args().nth(2).expect("Oops! You MUST provide filepath to scan.");
 
     println!("Pattern : {}", pattern);
     println!("Path    : {}\n", path);

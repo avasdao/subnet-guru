@@ -2,6 +2,13 @@
 name = "guru-bot"
 version = "22.9.8"
 authors = ["Ava's DAO <support@avasdao.org>"]
+description = "An automated bot for configuring, deploying and managing your Subnets."
+homepage = "https://subnet.guru"
+repository = "https://github.com/avasdao/subnet-guru"
+categories = ["subnets", "cryptocurrency"]
+keywords = ["avalanche", "avax", "crypto", "cryptocurrency", "bot", "command-line"]
+readme = "README.md"
+license = "MIT"
 edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html

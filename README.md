@@ -4,7 +4,7 @@
 
 ### https://subnet.guru
 
-A master guide for configuring, deploying and managing your Subnets.
+An automated bot for configuring, deploying and managing your Subnets.
 
 ### THIS PROJECT IS CURRENTLY STILL IN ALPHA-STAGE DEVELOPMENT. PLEASE DO NOT USE IN PRODUCTION.
 
