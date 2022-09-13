@@ -80,9 +80,9 @@
                     <div class="hidden lg:block lg:w-80">
                         <div class="flex items-center justify-end">
                             <div class="flex">
-                                <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-indigo-200 hover:text-white" aria-current="page">Dashboard</a>
+                                <a href="javascript://" class="rounded-md px-3 py-2 text-sm font-medium text-indigo-200 hover:text-white" aria-current="page">Dashboard</a>
 
-                                <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-indigo-200 hover:text-white">Domains</a>
+                                <a href="javascript://" class="rounded-md px-3 py-2 text-sm font-medium text-indigo-200 hover:text-white">Domains</a>
                             </div>
                             <!-- Profile dropdown -->
                             <div class="relative ml-4 flex-shrink-0">
@@ -117,11 +117,11 @@
                                     tabindex="-1"
                                 >
                                     <!-- Active: "bg-gray-100", Not Active: "" -->
-                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
+                                    <a href="javascript://" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
 
-                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a>
+                                    <a href="javascript://" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a>
 
-                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>
+                                    <a href="javascript://" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>
                                 </div>
                             </div>
                         </div>
@@ -133,17 +133,17 @@
             <div class="hidden lg:hidden" id="mobile-menu">
                 <div class="space-y-1 px-2 pt-2 pb-3">
                     <!-- Current: "text-white bg-indigo-800", Default: "text-indigo-200 hover:text-indigo-100 hover:bg-indigo-600" -->
-                    <a href="#" class="text-white bg-indigo-800 block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Dashboard</a>
+                    <a href="javascript://" class="text-white bg-indigo-800 block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Dashboard</a>
 
-                    <a href="#" class="text-indigo-200 hover:text-indigo-100 hover:bg-indigo-600 block px-3 py-2 rounded-md text-base font-medium">Domains</a>
+                    <a href="javascript://" class="text-indigo-200 hover:text-indigo-100 hover:bg-indigo-600 block px-3 py-2 rounded-md text-base font-medium">Domains</a>
                 </div>
                 <div class="border-t border-indigo-800 pt-4 pb-3">
                     <div class="space-y-1 px-2">
-                        <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-indigo-200 hover:bg-indigo-600 hover:text-indigo-100">Your Profile</a>
+                        <a href="javascript://" class="block rounded-md px-3 py-2 text-base font-medium text-indigo-200 hover:bg-indigo-600 hover:text-indigo-100">Your Profile</a>
 
-                        <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-indigo-200 hover:bg-indigo-600 hover:text-indigo-100">Settings</a>
+                        <a href="javascript://" class="block rounded-md px-3 py-2 text-base font-medium text-indigo-200 hover:bg-indigo-600 hover:text-indigo-100">Settings</a>
 
-                        <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-indigo-200 hover:bg-indigo-600 hover:text-indigo-100">Sign out</a>
+                        <a href="javascript://" class="block rounded-md px-3 py-2 text-base font-medium text-indigo-200 hover:bg-indigo-600 hover:text-indigo-100">Sign out</a>
                     </div>
                 </div>
             </div>
@@ -166,7 +166,7 @@
                                         </div>
                                         <div class="space-y-1">
                                             <div class="text-sm font-medium text-gray-900">Debbie Lewis</div>
-                                            <a href="#" class="group flex items-center space-x-2.5">
+                                            <a href="javascript://" class="group flex items-center space-x-2.5">
                                                 <svg class="h-5 w-5 text-gray-400 group-hover:text-gray-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                                                     <path
                                                         fill-rule="evenodd"
@@ -226,7 +226,10 @@
                 <div class="bg-white lg:min-w-0 lg:flex-1">
                     <div class="border-b border-t border-gray-200 pl-4 pr-6 pt-4 pb-4 sm:pl-6 lg:pl-8 xl:border-t-0 xl:pl-6 xl:pt-6">
                         <div class="flex items-center">
-                            <h1 class="flex-1 text-lg font-medium">Projects</h1>
+                            <h1 class="flex-1 text-lg font-medium">
+                                My Gurus
+                            </h1>
+
                             <div class="relative">
                                 <button
                                     type="button"
@@ -251,6 +254,7 @@
                                 </button>
                                 <!-- Dropdown menu, show/hide based on menu state. -->
                                 <div
+                                    v-if="showOptionsMenu"
                                     class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                                     role="menu"
                                     aria-orientation="vertical"
@@ -259,14 +263,15 @@
                                 >
                                     <div class="py-1" role="none">
                                         <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
-                                        <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="sort-menu-item-0">Name</a>
-                                        <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="sort-menu-item-1">Date modified</a>
-                                        <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="sort-menu-item-2">Date created</a>
+                                        <a href="javascript://" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="sort-menu-item-0">Name</a>
+                                        <a href="javascript://" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="sort-menu-item-1">dified</a>
+                                        <a href="javascript://" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="sort-menu-item-2">Date created</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <ul role="list" class="divide-y divide-gray-200 border-b border-gray-200">
                         <li class="relative py-5 pl-4 pr-6 hover:bg-gray-50 sm:py-6 sm:pl-6 lg:pl-8 xl:pl-6">
                             <div class="flex items-center justify-between space-x-4">
@@ -278,13 +283,13 @@
                                         </span>
 
                                         <h2 class="text-sm font-medium">
-                                            <a href="#">
+                                            <a href="javascript://">
                                                 <span class="absolute inset-0" aria-hidden="true"></span>
                                                 Workcation <span class="sr-only">Running</span>
                                             </a>
                                         </h2>
                                     </div>
-                                    <a href="#" class="group relative flex items-center space-x-2.5">
+                                    <a href="javascript://" class="group relative flex items-center space-x-2.5">
                                         <svg class="h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                             <path
                                                 fill-rule="evenodd"
@@ -305,7 +310,7 @@
                                 <!-- Repo meta info -->
                                 <div class="hidden flex-shrink-0 flex-col items-end space-y-3 sm:flex">
                                     <p class="flex items-center space-x-4">
-                                        <a href="#" class="relative text-sm font-medium text-gray-500 hover:text-gray-900">Visit site</a>
+                                        <a href="javascript://" class="relative text-sm font-medium text-gray-500 hover:text-gray-900">Visit site</a>
                                         <button type="button" class="relative rounded-full bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
                                             <span class="sr-only">Add to favorites</span>
                                             <!--
@@ -337,52 +342,23 @@
                     </ul>
                 </div>
             </div>
-            <!-- Activity feed -->
-            <div class="bg-gray-50 pr-4 sm:pr-6 lg:flex-shrink-0 lg:border-l lg:border-gray-200 lg:pr-8 xl:pr-0">
-                <div class="pl-6 lg:w-80">
-                    <div class="pt-6 pb-2">
-                        <h2 class="text-sm font-semibold">Activity</h2>
-                    </div>
-                    <div>
-                        <ul role="list" class="divide-y divide-gray-200">
-                            <li class="py-4">
-                                <div class="flex space-x-3">
-                                    <img class="h-6 w-6 rounded-full" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=256&h=256&q=80" alt="" />
-                                    <div class="flex-1 space-y-1">
-                                        <div class="flex items-center justify-between">
-                                            <h3 class="text-sm font-medium">You</h3>
-                                            <p class="text-sm text-gray-500">1h</p>
-                                        </div>
-                                        <p class="text-sm text-gray-500">Deployed Workcation (2d89f0c8 in master) to production</p>
-                                    </div>
-                                </div>
-                            </li>
 
-                            <!-- More items... -->
-                        </ul>
-                        <div class="border-t border-gray-200 py-4 text-sm">
-                            <a href="#" class="font-semibold text-indigo-600 hover:text-indigo-900">
-                                View all activity
-                                <span aria-hidden="true"> &rarr;</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <ActivityFeed />
         </div>
     </main>
 </template>
 
 <script>
 /* Import components. */
+import ActivityFeed from '@/components/ActivityFeed'
 // import { v4 as uuidv4 } from 'uuid'
 
 export default {
     components: {
-        //
+        ActivityFeed,
     },
     data: () => ({
-        //
+        showOptionsMenu: null,
     }),
     computed: {
         //
@@ -391,7 +367,7 @@ export default {
         //
     },
     created: async function () {
-        //
+        this.showOptionsMenu = false
     },
     mounted: function () {
         //
