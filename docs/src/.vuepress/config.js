@@ -53,7 +53,7 @@ module.exports = {
           collapsable: false,
           children: [
             '',
-            'using-vue',
+            'upgrades',
           ]
         }
       ],
@@ -63,7 +63,8 @@ module.exports = {
           collapsable: false,
           children: [
             '',
-            'using-vue',
+            'monitoring',
+            'security',
           ]
         }
       ],
