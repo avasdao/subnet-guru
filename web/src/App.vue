@@ -38,10 +38,10 @@ export default {
     },
     created: function () {
         /* Initialize modal. */
-        this.showModal = true
+        this.showModal = false
 
         /* Initialize (side) panel. */
-        this.showPanel = false
+        this.showPanel = true
     },
     mounted: function () {
         //

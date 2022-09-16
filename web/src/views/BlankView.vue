@@ -1,4 +1,6 @@
 <template>
+    <HeaderView title="Blank" />
+    
     <main>
         <h1>Blank</h1>
 
@@ -6,7 +8,13 @@
 </template>
 
 <script>
+/* Import components. */
+import HeaderView from '@/components/HeaderView'
+
 export default {
+    components: {
+        HeaderView,
+    },
     data: () => ({
         //
     }),

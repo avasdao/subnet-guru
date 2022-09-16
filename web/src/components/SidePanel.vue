@@ -17,24 +17,6 @@
         -->
                 <div class="pointer-events-auto w-screen max-w-2xl">
                     <div class="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
-                        <div class="px-4 py-6 sm:px-6">
-                            <div class="flex items-start justify-between">
-                                <h2 class="text-lg font-medium text-gray-900" id="slide-over-title">
-                                    Add a Guru
-                                </h2>
-
-                                <div class="ml-3 flex h-7 items-center">
-                                    <button type="button" class="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:ring-2 focus:ring-indigo-500">
-                                        <span class="sr-only">Close panel</span>
-                                        <!-- Heroicon name: outline/x-mark -->
-                                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
                         <router-view />
                     </div>
                 </div>

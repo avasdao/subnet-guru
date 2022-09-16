@@ -1,4 +1,6 @@
 <template>
+    <HeaderView title="Dashboard" />
+
     <main class="divide-y divide-gray-200">
         <div class="pb-6">
             <div class="h-24 bg-indigo-700 sm:h-20 lg:h-28"></div>
@@ -15,29 +17,39 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="mt-6 sm:ml-6 sm:flex-1">
                     <div>
                         <div class="flex items-center">
-                            <h3 class="text-xl font-bold text-gray-900 sm:text-2xl">Ashley Porter</h3>
+                            <h3 class="text-xl font-bold text-gray-900 sm:text-2xl">
+                                Ashley Porter
+                            </h3>
+
                             <span class="ml-2.5 inline-block h-2 w-2 flex-shrink-0 rounded-full bg-green-400">
                                 <span class="sr-only">Online</span>
                             </span>
                         </div>
-                        <p class="text-sm text-gray-500">@ashleyporter</p>
+
+                        <p class="text-sm text-gray-500">
+                            @ashleyporter
+                        </p>
                     </div>
+
                     <div class="mt-5 flex flex-wrap space-y-3 sm:space-y-0 sm:space-x-3">
-                        <button
-                            type="button"
+                        <router-link
+                            to="/add"
                             class="inline-flex w-full flex-shrink-0 items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:flex-1"
                         >
-                            Message
-                        </button>
-                        <button
-                            type="button"
+                            Add a Guru
+                        </router-link>
+
+                        <router-link
+                            to="/gurus"
                             class="inline-flex w-full flex-1 items-center justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                         >
-                            Call
-                        </button>
+                            My Gurus
+                        </router-link>
+
                         <div class="ml-3 inline-flex sm:ml-0">
                             <div class="relative inline-block text-left">
                                 <button
@@ -65,7 +77,7 @@
           To: "transform opacity-0 scale-95"
       -->
                                 <div
-                                    class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                                    class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                                     role="menu"
                                     aria-orientation="vertical"
                                     aria-labelledby="options-menu-button"
@@ -73,8 +85,13 @@
                                 >
                                     <div class="py-1" role="none">
                                         <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
-                                        <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="options-menu-item-0">View profile</a>
-                                        <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="options-menu-item-1">Copy profile link</a>
+                                        <a href="javascript://" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="options-menu-item-0">
+                                            View profile
+                                        </a>
+
+                                        <a href="javascript://" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="options-menu-item-1">
+                                            Copy profile link
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -83,26 +100,52 @@
                 </div>
             </div>
         </div>
+
         <div class="px-4 py-5 sm:px-0 sm:py-0">
             <dl class="space-y-8 sm:space-y-0 sm:divide-y sm:divide-gray-200">
                 <div class="sm:flex sm:px-6 sm:py-5">
-                    <dt class="text-sm font-medium text-gray-500 sm:w-40 sm:flex-shrink-0 lg:w-48">Bio</dt>
+                    <dt class="text-sm font-medium text-gray-500 sm:w-40 sm:flex-shrink-0 lg:w-48">
+                        Bio
+                    </dt>
+
                     <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0 sm:ml-6">
-                        <p>Enim feugiat ut ipsum, neque ut. Tristique mi id elementum praesent. Gravida in tempus feugiat netus enim aliquet a, quam scelerisque. Dictumst in convallis nec in bibendum aenean arcu.</p>
+                        <p>
+                            Enim feugiat ut ipsum, neque ut. Tristique mi id elementum praesent.
+                            Gravida in tempus feugiat netus enim aliquet a, quam scelerisque.
+                            Dictumst in convallis nec in bibendum aenean arcu.
+                        </p>
                     </dd>
                 </div>
+
                 <div class="sm:flex sm:px-6 sm:py-5">
-                    <dt class="text-sm font-medium text-gray-500 sm:w-40 sm:flex-shrink-0 lg:w-48">Location</dt>
-                    <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0 sm:ml-6">New York, NY, USA</dd>
-                </div>
-                <div class="sm:flex sm:px-6 sm:py-5">
-                    <dt class="text-sm font-medium text-gray-500 sm:w-40 sm:flex-shrink-0 lg:w-48">Website</dt>
-                    <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0 sm:ml-6">ashleyporter.com</dd>
-                </div>
-                <div class="sm:flex sm:px-6 sm:py-5">
-                    <dt class="text-sm font-medium text-gray-500 sm:w-40 sm:flex-shrink-0 lg:w-48">Birthday</dt>
+                    <dt class="text-sm font-medium text-gray-500 sm:w-40 sm:flex-shrink-0 lg:w-48">
+                        Location
+                    </dt>
+
                     <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0 sm:ml-6">
-                        <time datetime="1982-06-23">June 23, 1982</time>
+                        New York, NY, USA
+                    </dd>
+                </div>
+
+                <div class="sm:flex sm:px-6 sm:py-5">
+                    <dt class="text-sm font-medium text-gray-500 sm:w-40 sm:flex-shrink-0 lg:w-48">
+                        Website
+                    </dt>
+
+                    <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0 sm:ml-6">
+                        ashleyporter.com
+                    </dd>
+                </div>
+
+                <div class="sm:flex sm:px-6 sm:py-5">
+                    <dt class="text-sm font-medium text-gray-500 sm:w-40 sm:flex-shrink-0 lg:w-48">
+                        Birthday
+                    </dt>
+
+                    <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0 sm:ml-6">
+                        <time datetime="1982-06-23">
+                            June 23, 1982
+                        </time>
                     </dd>
                 </div>
             </dl>
@@ -111,7 +154,13 @@
 </template>
 
 <script>
+/* Import components. */
+import HeaderView from '@/components/HeaderView'
+
 export default {
+    components: {
+        HeaderView,
+    },
     data: () => ({
         //
     }),
