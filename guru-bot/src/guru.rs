@@ -1,6 +1,11 @@
 #![allow(unused)]
 
 use clap::Parser;
+use indicatif::{ProgressBar, ProgressState, ProgressStyle};
+use log::{info, warn};
+use std::thread;
+use std::time::Duration;
+use std::{cmp::min, fmt::Write};
 
 #[derive(Parser)]
 struct Cli {
@@ -28,6 +33,36 @@ fn main() {
     // println!("Path    : {}\n", path);
     println!("  Search pattern is : {}", args.pattern);
     println!("     Search path is : {}\n", args.path.display());
+
+    // let content = std::fs::read_to_string(&args.path);
+    //     .expect("Oops! Could not read the file you specified.");
+    let result = std::fs::read_to_string(&args.path);
+
+    match result {
+        Ok(content) => { 
+            for line in content.lines() {
+                if line.contains(&args.pattern) {
+                    println!("  Look! We found a line ---> {}", line);
+                }
+            }
+
+            println!(); // empty line / spacer
+        }
+        
+        Err(error) => { 
+            println!("Oops! Could not read the file you specified.\n\n[ {} ]", error); 
+        }
+    }
+
+    // start_download();
+
+    env_logger::init();
+    info!("starting up");
+    warn!("oops, nothing implemented!");
+
+
+    // let xs = vec![1, 2, 3];
+    // println!("The list is: {:?}", xs);
 
     // let a = 100;
     // let b = 200;
@@ -136,4 +171,24 @@ fn welcome_banner_alt_2() {
     \___| \__,_||_____||__|__||_____| |__|      |___,_| \__,_||__|\_|\__,_|");
 
      println!("                                                     v{}\n", get_version());
+}
+
+fn start_download() {
+    let mut downloaded = 0;
+    let total_size = 231231231;
+
+    let pb = ProgressBar::new(total_size);
+    pb.set_style(ProgressStyle::with_template("{spinner:.green} [{elapsed_precise}] [{wide_bar:.cyan/blue}] {bytes}/{total_bytes} ({eta})")
+        .unwrap()
+        .with_key("eta", |state: &ProgressState, w: &mut dyn Write| write!(w, "{:.1}s", state.eta().as_secs_f64()).unwrap())
+        .progress_chars("#>-"));
+
+    while downloaded < total_size {
+        let new = min(downloaded + 223211, total_size);
+        downloaded = new;
+        pb.set_position(new);
+        thread::sleep(Duration::from_millis(12));
+    }
+
+    pb.finish_with_message("downloaded");
 }
