@@ -7,7 +7,7 @@
 
         <div class="mx-auto w-full max-w-7xl flex-grow lg:flex xl:px-8">
             <div class="min-w-0 flex-1 bg-white xl:flex">
-                <SideBar :gurus="gurus" />
+                <SideBar :gurus="gurus" @openPanel="openPanel" />
 
                 <MyGurus :gurus="gurus" />
             </div>
@@ -40,7 +40,10 @@ export default {
         //
     },
     methods: {
-        //
+        openPanel() {
+            this.$emit('openPanel')
+        },
+        
     },
     created: async function () {
         this.showOptionsMenu = false

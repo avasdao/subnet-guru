@@ -36,24 +36,37 @@
                         <div class="flex flex-col sm:flex-row xl:flex-col space-y-4">
 
                             <button
+                                @click="toggleGurus"
                                 type="button"
-                                class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 xl:w-full"
+                                class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-xl font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 xl:w-full"
                             >
-                                Add a Guru
+                                My Gurus
                             </button>
 
                             <button
+                                @click="toggleSubnets"
                                 type="button"
-                                class="inline-flex items-center justify-center rounded-md border border-transparent bg-yellow-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 xl:w-full"
+                                class="inline-flex items-center justify-center rounded-md border border-transparent bg-yellow-400 px-4 py-2 text-xl font-medium text-white shadow-sm hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 xl:w-full"
                             >
-                                Create a Subnet
+                                My Subnets
                             </button>
 
+                            <hr class="mx-10 border-rose-500" />
+
                             <button
+                                @click="toggleToolbox"
                                 type="button"
                                 class="inline-flex items-center justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:ml-3 xl:ml-0 xl:w-full"
                             >
                                 Open Toolbox
+                            </button>
+
+                            <button
+                                @click="toggleReports"
+                                type="button"
+                                class="inline-flex items-center justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:ml-3 xl:ml-0 xl:w-full"
+                            >
+                                View Reports
                             </button>
 
                         </div>
@@ -63,11 +76,7 @@
                     <div class="pl-3 flex flex-col space-y-6 sm:flex-row sm:space-y-0 sm:space-x-8 xl:flex-col xl:space-x-0 xl:space-y-6">
 
                         <div class="flex items-center space-x-2">
-                            <svg class="h-6 w-6 text-rose-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                <path
-                                    d="M5.127 3.502L5.25 3.5h9.5c.041 0 .082 0 .123.002A2.251 2.251 0 0012.75 2h-5.5a2.25 2.25 0 00-2.123 1.502zM1 10.25A2.25 2.25 0 013.25 8h13.5A2.25 2.25 0 0119 10.25v5.5A2.25 2.25 0 0116.75 18H3.25A2.25 2.25 0 011 15.75v-5.5zM3.25 6.5c-.04 0-.082 0-.123.002A2.25 2.25 0 015.25 5h9.5c.98 0 1.814.627 2.123 1.502a3.819 3.819 0 00-.123-.002H3.25z"
-                                />
-                            </svg>
+                            <svg class="w-6 h-6 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
 
                             <span class="text-sm font-medium text-gray-500">
                                 <span class="text-rose-700 text-xl">{{gurus.length}}x</span>
@@ -122,7 +131,26 @@ export default {
         //
     },
     methods: {
-        //
+        toggleGurus() {
+            /* Open the (side) panel. */
+            this.$emit('openPanel')
+
+            /* Load (my) gurus. */
+            this.$router.push('/gurus')
+        },
+
+        toggleSubnets() {
+            alert('subnets')
+        },
+
+        toggleToolbox() {
+            alert('toolbox')
+        },
+
+        toggleReports() {
+            alert('reports')
+        },
+
     },
     created: function () {
         //

@@ -1,7 +1,6 @@
 <template>
-    <main class="relative z-10" aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
-
-        <BaseView />
+    <main class="relative z-10 h-screen overflow-y-hidden" aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
+        <BaseView @openPanel="openPanel" />
 
         <SidePanel v-if="showPanel" />
     </main>
@@ -35,13 +34,17 @@ export default {
             this.showModal = false
         },
 
+        openPanel() {
+            this.showPanel = true
+        },
+
     },
     created: function () {
         /* Initialize modal. */
         this.showModal = false
 
         /* Initialize (side) panel. */
-        this.showPanel = true
+        this.showPanel = false
     },
     mounted: function () {
         //
