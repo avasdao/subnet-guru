@@ -1,11 +1,15 @@
 #![allow(unused)]
 
+/* Initailize 3rd-party crates. */
 use clap::Parser;
 use indicatif::{ProgressBar, ProgressState, ProgressStyle};
 use log::{info, warn};
 use std::thread;
 use std::time::Duration;
 use std::{cmp::min, fmt::Write};
+
+/* Initialize our own crate methods. */
+use guru::welcome_banner;
 
 #[derive(Parser)]
 struct Cli {
@@ -116,62 +120,7 @@ fn modifies(y: &mut f64) {
     *y = 1.337;
 }
 
-fn get_version() -> &'static str {
-    return "22.9.16 (alpha)";
-}
 
-/**
- * Welcome Banner
- * 
- * Prints a welcome banner when the CLI is executed.
- */
-fn welcome_banner() {
-    println!(r"
-    _________    ___.                  __      ________                    
-   /   _____/__ _\_ |__   ____   _____/  |_   /  _____/ __ _________ __ __ 
-   \_____  \|  |  \ __ \ /    \_/ __ \   __\ /   \  ___|  |  \_  __ \  |  \
-   /        \  |  / \_\ \   |  \  ___/|  |   \    \_\  \  |  /|  | \/  |  /
-  /_______  /____/|___  /___|  /\___  >__|    \______  /____/ |__|  |____/ 
-          \/          \/     \/     \/               \/                    ");
-
-    println!("                                                      v{}\n", get_version());
-}
-
-/**
- * Welcome Banner (Alternate)
- * 
- * Prints a welcome banner when the CLI is executed.
- */
-fn welcome_banner_alt() {
-    println!(r"
-
-   ███████╗██╗   ██╗██████╗ ███╗   ██╗███████╗████████╗     ██████╗ ██╗   ██╗██████╗ ██╗   ██╗
-   ██╔════╝██║   ██║██╔══██╗████╗  ██║██╔════╝╚══██╔══╝    ██╔════╝ ██║   ██║██╔══██╗██║   ██║
-   ███████╗██║   ██║██████╔╝██╔██╗ ██║█████╗     ██║       ██║  ███╗██║   ██║██████╔╝██║   ██║
-   ╚════██║██║   ██║██╔══██╗██║╚██╗██║██╔══╝     ██║       ██║   ██║██║   ██║██╔══██╗██║   ██║
-   ███████║╚██████╔╝██████╔╝██║ ╚████║███████╗   ██║       ╚██████╔╝╚██████╔╝██║  ██║╚██████╔╝
-   ╚══════╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝   ╚═╝        ╚═════╝  ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ");
-
-    println!("                                                                    v{}\n", get_version());
-}
-
-/**
- * Welcome Banner (Alternate #2)
- * 
- * Prints a welcome banner when the CLI is executed.
- */
-fn welcome_banner_alt_2() {
-    println!(r"
-    _____ __ __  ____   ____     ___ ______       ____  __ __  ____  __ __ 
-   / ___/|  |  ||    \ |    \   /  _]      |     /    ||  |  ||    \|  |  |
-  (   \_ |  |  ||  o  )|  _  | /  [_|      |    |   __||  |  ||  D  )  |  |
-   \__  ||  |  ||     ||  |  ||    _]_|  |_|    |  |  ||  |  ||    /|  |  |
-   /  \ ||  :  ||  O  ||  |  ||   [_  |  |      |  |_ ||  :  ||    \|  :  |
-   \    ||     ||     ||  |  ||     | |  |      |     ||     ||  .  \     |
-    \___| \__,_||_____||__|__||_____| |__|      |___,_| \__,_||__|\_|\__,_|");
-
-     println!("                                                     v{}\n", get_version());
-}
 
 fn start_download() {
     let mut downloaded = 0;

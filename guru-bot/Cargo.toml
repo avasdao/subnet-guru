@@ -1,5 +1,5 @@
 [package]
-name = "guru-bot"
+name = "guru"
 version = "22.9.8"
 authors = ["Ava's DAO <support@avasdao.org>"]
 description = "An automated bot for configuring, deploying and managing your Subnets."
