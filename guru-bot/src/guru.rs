@@ -1,15 +1,12 @@
 #![allow(unused)]
 
+/* Import modules. */
+mod utils;
+mod welcome;
+
 /* Initailize 3rd-party crates. */
 use clap::Parser;
-use indicatif::{ProgressBar, ProgressState, ProgressStyle};
 use log::{info, warn};
-use std::thread;
-use std::time::Duration;
-use std::{cmp::min, fmt::Write};
-
-/* Initialize our own crate methods. */
-use guru::welcome_banner;
 
 #[derive(Parser)]
 struct Cli {
@@ -26,8 +23,8 @@ struct Cli {
  * Entry point for this application.
  */
 fn main() {
-    /* Welcome banner. */
-    welcome_banner();
+    /* Display (Welcome) banner. */
+    welcome::display_banner();
 
     // let pattern = std::env::args().nth(1).expect("Oops! You MUST provide a pattern to search.");
     // let path = std::env::args().nth(2).expect("Oops! You MUST provide filepath to scan.");
@@ -58,16 +55,6 @@ fn main() {
         }
     }
 
-    // start_download();
-
-    env_logger::init();
-    info!("starting up");
-    warn!("oops, nothing implemented!");
-
-
-    // let xs = vec![1, 2, 3];
-    // println!("The list is: {:?}", xs);
-
     // let a = 100;
     // let b = 200;
     // println!("\nResult is {}", a + b);
@@ -86,8 +73,8 @@ fn main() {
     // }
     // println!("\nThe sum is {}", sum);
 
-    // let my_sqr = sqr(4.0);
-    // println!("\nSquare is {}", my_sqr);
+    let my_sqr = utils::sqr(4.0);
+    println!("  Square is {}\n", my_sqr);
 
     // let j = 10;
     // let res1 = by_ref(&j);
@@ -97,47 +84,12 @@ fn main() {
     // let mut res3 = 0.0;
     // modifies(&mut res3);
     // println!("\nModified value to {}", res3);
-}
 
-/**
- * Squared
- * 
- * Calculate the square of a number.
- */
-fn sqr(x: f64) -> f64 {
-    x * x
-}
+    env_logger::init();
+    info!("starting up");
+    warn!("oops, nothing implemented!\n");
 
-fn by_ref(x: &i32) -> i32 {
-    println!("\nRef of (x) is {} and {}", x, *x);
+    utils::start_download();
+    println!("\n");
 
-    *x + 1
-}
-
-fn modifies(y: &mut f64) {
-    println!("\nRef of (y) is {} and {}", y, *y);
-
-    *y = 1.337;
-}
-
-
-
-fn start_download() {
-    let mut downloaded = 0;
-    let total_size = 231231231;
-
-    let pb = ProgressBar::new(total_size);
-    pb.set_style(ProgressStyle::with_template("{spinner:.green} [{elapsed_precise}] [{wide_bar:.cyan/blue}] {bytes}/{total_bytes} ({eta})")
-        .unwrap()
-        .with_key("eta", |state: &ProgressState, w: &mut dyn Write| write!(w, "{:.1}s", state.eta().as_secs_f64()).unwrap())
-        .progress_chars("#>-"));
-
-    while downloaded < total_size {
-        let new = min(downloaded + 223211, total_size);
-        downloaded = new;
-        pb.set_position(new);
-        thread::sleep(Duration::from_millis(12));
-    }
-
-    pb.finish_with_message("downloaded");
 }

@@ -7,7 +7,7 @@ pub fn get_version() -> &'static str {
  * 
  * Prints a welcome banner when the CLI is executed.
  */
-pub fn welcome_banner() {
+pub fn display_banner() {
     println!(r"
     _________    ___.                  __      ________                    
    /   _____/__ _\_ |__   ____   _____/  |_   /  _____/ __ _________ __ __ 
@@ -24,7 +24,7 @@ pub fn welcome_banner() {
  * 
  * Prints a welcome banner when the CLI is executed.
  */
-pub fn welcome_banner_alt() {
+pub fn display_banner_alt() {
     println!(r"
 
    ███████╗██╗   ██╗██████╗ ███╗   ██╗███████╗████████╗     ██████╗ ██╗   ██╗██████╗ ██╗   ██╗
@@ -42,7 +42,7 @@ pub fn welcome_banner_alt() {
  * 
  * Prints a welcome banner when the CLI is executed.
  */
-pub fn welcome_banner_alt_2() {
+pub fn display_banner_alt_2() {
     println!(r"
     _____ __ __  ____   ____     ___ ______       ____  __ __  ____  __ __ 
    / ___/|  |  ||    \ |    \   /  _]      |     /    ||  |  ||    \|  |  |
