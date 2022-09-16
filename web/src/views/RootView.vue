@@ -3,7 +3,9 @@
     <div class="fixed top-0 right-0 h-full w-1/2 bg-gray-50" aria-hidden="true"></div>
 
     <main class="relative flex min-h-full flex-col">
-        <SiteHeader />
+        <SiteHeader
+            @openPanel="openPanel"
+        />
 
         <div class="mx-auto w-full max-w-7xl flex-grow lg:flex xl:px-8">
             <div class="min-w-0 flex-1 bg-white xl:flex">
