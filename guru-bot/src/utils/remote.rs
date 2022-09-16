@@ -4,27 +4,6 @@ use std::thread;
 use std::time::Duration;
 
 /**
- * Squared
- * 
- * Calculate the square of a number.
- */
-pub fn sqr(x: f64) -> f64 {
-    x * x
-}
-
-fn by_ref(x: &i32) -> i32 {
-    println!("\nRef of (x) is {} and {}", x, *x);
-
-    *x + 1
-}
-
-fn modifies(y: &mut f64) {
-    println!("\nRef of (y) is {} and {}", y, *y);
-
-    *y = 1.337;
-}
-
-/**
  * Start Download
  * 
  * Will manage a download and display progress to the user.

@@ -1,6 +1,7 @@
 #![allow(unused)]
 
 /* Import modules. */
+mod crypto;
 mod utils;
 mod welcome;
 
@@ -73,7 +74,7 @@ fn main() {
     // }
     // println!("\nThe sum is {}", sum);
 
-    let my_sqr = utils::sqr(4.0);
+    let my_sqr = crypto::math::sqr(4.0);
     println!("  Square is {}\n", my_sqr);
 
     // let j = 10;
@@ -89,7 +90,7 @@ fn main() {
     info!("starting up");
     warn!("oops, nothing implemented!\n");
 
-    utils::start_download();
+    utils::remote::start_download();
     println!("\n");
 
 }
