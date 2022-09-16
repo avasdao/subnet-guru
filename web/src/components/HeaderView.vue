@@ -6,7 +6,11 @@
             </h2>
 
             <div class="ml-3 flex h-7 items-center">
-                <button type="button" class="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:ring-2 focus:ring-indigo-500">
+                <button
+                    @click="closePanel"
+                    type="button"
+                    class="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:ring-2 focus:ring-indigo-500"
+                >
                     <span class="sr-only">Close panel</span>
                     <!-- Heroicon name: outline/x-mark -->
                     <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
@@ -30,7 +34,10 @@ export default {
         //
     },
     methods: {
-        //
+        closePanel() {
+            this.$emit('closePanel')
+        },
+
     },
     created: function () {
         //

@@ -1,9 +1,11 @@
 <template>
-    <!-- Background backdrop, show/hide based on slide-over state. -->
     <div class="fixed inset-0 bg-gray-800 opacity-80"></div>
 
     <main class="fixed inset-0 overflow-hidden">
-        <div class="absolute inset-0 overflow-hidden">
+        <div
+            @click="closePanel"
+            class="absolute inset-0 overflow-hidden"
+        >
             <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10 sm:pl-16">
                 <!--
           Slide-over panel, show/hide based on slide-over state.
@@ -17,7 +19,7 @@
         -->
                 <div class="pointer-events-auto w-screen max-w-2xl">
                     <div class="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
-                        <router-view />
+                        <router-view @closePanel="closePanel" />
                     </div>
                 </div>
             </div>
@@ -34,7 +36,10 @@ export default {
         //
     },
     methods: {
-        //
+        closePanel() {
+            this.$emit('closePanel')
+        },
+
     },
     created: function () {
         //

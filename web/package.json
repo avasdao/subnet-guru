@@ -1,6 +1,6 @@
 {
   "name": "subnet-guru",
-  "version": "22.9.7",
+  "version": "22.9.16",
   "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "core-js": "3.24.1",
-    "ethers": "5.7.0",
+    "ethers": "5.7.1",
     "moment": "2.29.4",
     "numeral": "2.0.6",
     "uuid": "8.3.2",
