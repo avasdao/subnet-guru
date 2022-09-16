@@ -1,5 +1,8 @@
 <template>
-    <HeaderView title="Dashboard" />
+    <HeaderView
+        @closePanel="closePanel"
+        title="Dashboard"
+     />
 
     <main class="divide-y divide-gray-200">
 
@@ -253,7 +256,10 @@ export default {
         //
     },
     methods: {
-        //
+        closePanel() {
+            this.$emit('closePanel')
+        },
+
     },
     created: function () {
         //

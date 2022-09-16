@@ -4,7 +4,7 @@
         <div class="border-b border-t border-gray-200 pl-4 pr-6 pt-4 pb-4 sm:pl-6 lg:pl-8 xl:border-t-0 xl:pl-6 xl:pt-6">
             <div class="flex items-center">
                 <h1 class="flex-1 text-lg font-medium">
-                    My Gurus
+                    My Subnets
                 </h1>
 
                 <div class="relative">
@@ -53,7 +53,7 @@
         <ul role="list" class="divide-y divide-gray-200 border-b border-gray-200">
 
             <li
-                v-for="guru of gurus" :key="guru.id"
+                v-for="subnet of subnets" :key="subnet.id"
                 class="relative py-5 pl-4 pr-6 hover:bg-gray-50 sm:py-6 sm:pl-6 lg:pl-8 xl:pl-6"
             >
                 <div class="flex items-center justify-between space-x-4">
@@ -67,7 +67,7 @@
                             <h2 class="text-sm font-medium">
                                 <a href="javascript://">
                                     <span class="absolute inset-0" aria-hidden="true"></span>
-                                    {{guru.title}} <span class="sr-only">Running</span>
+                                    {{subnet.title}} <span class="sr-only">Running</span>
                                 </a>
                             </h2>
                         </div>
@@ -128,14 +128,14 @@
         </ul>
 
         <section class="mt-10 text-center">
-            <svg class="mx-auto h-16 w-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+            <svg class="mx-auto h-16 w-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path></svg>
 
             <h3 class="mt-2 text-2xl font-medium text-gray-900">
-                You have NO saved Gurus
+                You have NO saved Subnets
             </h3>
 
             <p class="mt-1 text-md text-gray-500">
-                Get started by deploying a NEW Guru
+                Get started by deploying a NEW Subnet
             </p>
 
             <div class="mt-6">
@@ -148,7 +148,7 @@
                         <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
                     </svg>
 
-                    Add a New Guru
+                    Add a New Subnet
                 </button>
             </div>
         </section>
@@ -158,10 +158,10 @@
 <script>
 export default {
     props: {
-        gurus: Object,
+        subnets: Object,
     },
     data: () => ({
-        // 
+        //
     }),
     computed: {
         //

@@ -1,6 +1,6 @@
 <template>
     <main class="relative z-10 h-screen sm:overflow-y-hidden" aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
-        <BaseView @openPanel="openPanel" />
+        <RootView @openPanel="openPanel" />
 
         <SidePanel v-if="showPanel" @closePanel="closePanel" />
     </main>
@@ -9,8 +9,8 @@
 </template>
 
 <script>
-/* Import home view. */
-import BaseView from './views/BaseView'
+/* Import root view. */
+import RootView from './views/RootView'
 
 /* Import components. */
 import ModalView from '@/components/ModalView'
@@ -18,7 +18,7 @@ import SidePanel from '@/components/SidePanel'
 
 export default {
     components: {
-        BaseView,
+        RootView,
         ModalView,
         SidePanel,
     },

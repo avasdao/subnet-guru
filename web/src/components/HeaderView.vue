@@ -1,7 +1,7 @@
 <template>
     <header class="px-4 py-6 sm:px-6 border-b border-indigo-500 shadow">
         <div class="flex items-start justify-between">
-            <h2 class="text-xl font-medium text-gray-700" id="slide-over-title">
+            <h2 class="text-2xl font-medium text-gray-700 uppercase" id="slide-over-title">
                 {{title}}
             </h2>
 

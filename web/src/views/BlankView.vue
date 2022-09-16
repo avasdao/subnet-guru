@@ -1,6 +1,9 @@
 <template>
-    <HeaderView title="Blank" />
-    
+    <HeaderView
+        @closePanel="closePanel"
+        title="Blank"
+     />
+
     <main>
         <h1>Blank</h1>
 
@@ -22,7 +25,10 @@ export default {
         //
     },
     methods: {
-        //
+        closePanel() {
+            this.$emit('closePanel')
+        },
+
     },
     created: function () {
         //

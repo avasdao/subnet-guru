@@ -4,6 +4,7 @@ import HomeView from '../views/HomeView'
 
 import AddGuru from '../views/AddGuru'
 import MyGurus from '../views/MyGurus'
+import ToolboxView from '../views/ToolboxView'
 
 const routes = [
     {
@@ -17,6 +18,10 @@ const routes = [
     {
         path: '/gurus',
         component: MyGurus,
+    },
+    {
+        path: '/toolbox',
+        component: ToolboxView,
     },
 ]
 

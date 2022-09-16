@@ -58,7 +58,7 @@
                                 type="button"
                                 class="inline-flex items-center justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:ml-3 xl:ml-0 xl:w-full"
                             >
-                                Open Toolbox
+                                Subnet Toolbox
                             </button>
 
                             <button
@@ -66,7 +66,7 @@
                                 type="button"
                                 class="inline-flex items-center justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:ml-3 xl:ml-0 xl:w-full"
                             >
-                                View Reports
+                                Subnet Reports
                             </button>
 
                         </div>
@@ -80,7 +80,7 @@
 
                             <span class="text-sm font-medium text-gray-500">
                                 <span class="text-rose-700 text-xl">{{gurus.length}}x</span>
-                                Guru Connections
+                                Connected Gurus
                             </span>
                         </div>
 
@@ -123,6 +123,8 @@
 export default {
     props: {
         gurus: Object,
+        selectedGuru: String,
+        selectedSubnet: String,
     },
     data: () => ({
         //
@@ -132,23 +134,23 @@ export default {
     },
     methods: {
         toggleGurus() {
+            this.$emit('showGurus')
+        },
+
+        toggleSubnets() {
+            this.$emit('showSubnets')
+        },
+
+        toggleToolbox() {
             /* Open the (side) panel. */
             this.$emit('openPanel')
 
             /* Load (my) gurus. */
-            this.$router.push('/gurus')
-        },
-
-        toggleSubnets() {
-            alert('subnets')
-        },
-
-        toggleToolbox() {
-            alert('toolbox')
+            this.$router.push('/toolbox')
         },
 
         toggleReports() {
-            alert('reports')
+            alert('coming soon..')
         },
 
     },

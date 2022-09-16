@@ -1,5 +1,8 @@
 <template>
-    <HeaderView title="Add a Guru" />
+    <HeaderView
+        @closePanel="closePanel"
+        title="Add a Guru"
+     />
 
     <main class="mt-10">
         <section>
@@ -27,7 +30,10 @@ export default {
         //
     },
     methods: {
-        //
+        closePanel() {
+            this.$emit('closePanel')
+        },
+
     },
     created: function () {
         //
