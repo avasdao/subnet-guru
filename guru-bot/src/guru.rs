@@ -1,7 +1,12 @@
-// TODO Add libraries here.
+#![allow(unused)]
 
+use clap::Parser;
+
+#[derive(Parser)]
 struct Cli {
     pattern: String,
+
+    #[clap(parse(from_os_str))]
     path: std::path::PathBuf,
 }
 
@@ -15,11 +20,14 @@ fn main() {
     /* Welcome banner. */
     welcome_banner();
 
-    let pattern = std::env::args().nth(1).expect("Oops! You MUST provide a pattern to search.");
-    let path = std::env::args().nth(2).expect("Oops! You MUST provide filepath to scan.");
+    // let pattern = std::env::args().nth(1).expect("Oops! You MUST provide a pattern to search.");
+    // let path = std::env::args().nth(2).expect("Oops! You MUST provide filepath to scan.");
+    let args = Cli::parse();
 
-    println!("Pattern : {}", pattern);
-    println!("Path    : {}\n", path);
+    // println!("Pattern : {}", pattern);
+    // println!("Path    : {}\n", path);
+    println!("  Search pattern is : {}", args.pattern);
+    println!("     Search path is : {}\n", args.path.display());
 
     // let a = 100;
     // let b = 200;
@@ -74,7 +82,7 @@ fn modifies(y: &mut f64) {
 }
 
 fn get_version() -> &'static str {
-    return "22.9.12 (alpha)";
+    return "22.9.16 (alpha)";
 }
 
 /**
@@ -85,11 +93,47 @@ fn get_version() -> &'static str {
 fn welcome_banner() {
     println!(r"
     _________    ___.                  __      ________                    
-    /   _____/__ _\_ |__   ____   _____/  |_   /  _____/ __ _________ __ __ 
-    \_____  \|  |  \ __ \ /    \_/ __ \   __\ /   \  ___|  |  \_  __ \  |  \
-    /        \  |  / \_\ \   |  \  ___/|  |   \    \_\  \  |  /|  | \/  |  /
-   /_______  /____/|___  /___|  /\___  >__|    \______  /____/ |__|  |____/ 
-           \/          \/     \/     \/               \/                    ");
+   /   _____/__ _\_ |__   ____   _____/  |_   /  _____/ __ _________ __ __ 
+   \_____  \|  |  \ __ \ /    \_/ __ \   __\ /   \  ___|  |  \_  __ \  |  \
+   /        \  |  / \_\ \   |  \  ___/|  |   \    \_\  \  |  /|  | \/  |  /
+  /_______  /____/|___  /___|  /\___  >__|    \______  /____/ |__|  |____/ 
+          \/          \/     \/     \/               \/                    ");
 
-    println!("                                                     v{}\n", get_version());
+    println!("                                                      v{}\n", get_version());
+}
+
+/**
+ * Welcome Banner (Alternate)
+ * 
+ * Prints a welcome banner when the CLI is executed.
+ */
+fn welcome_banner_alt() {
+    println!(r"
+
+   ███████╗██╗   ██╗██████╗ ███╗   ██╗███████╗████████╗     ██████╗ ██╗   ██╗██████╗ ██╗   ██╗
+   ██╔════╝██║   ██║██╔══██╗████╗  ██║██╔════╝╚══██╔══╝    ██╔════╝ ██║   ██║██╔══██╗██║   ██║
+   ███████╗██║   ██║██████╔╝██╔██╗ ██║█████╗     ██║       ██║  ███╗██║   ██║██████╔╝██║   ██║
+   ╚════██║██║   ██║██╔══██╗██║╚██╗██║██╔══╝     ██║       ██║   ██║██║   ██║██╔══██╗██║   ██║
+   ███████║╚██████╔╝██████╔╝██║ ╚████║███████╗   ██║       ╚██████╔╝╚██████╔╝██║  ██║╚██████╔╝
+   ╚══════╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝   ╚═╝        ╚═════╝  ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ");
+
+    println!("                                                                    v{}\n", get_version());
+}
+
+/**
+ * Welcome Banner (Alternate #2)
+ * 
+ * Prints a welcome banner when the CLI is executed.
+ */
+fn welcome_banner_alt_2() {
+    println!(r"
+    _____ __ __  ____   ____     ___ ______       ____  __ __  ____  __ __ 
+   / ___/|  |  ||    \ |    \   /  _]      |     /    ||  |  ||    \|  |  |
+  (   \_ |  |  ||  o  )|  _  | /  [_|      |    |   __||  |  ||  D  )  |  |
+   \__  ||  |  ||     ||  |  ||    _]_|  |_|    |  |  ||  |  ||    /|  |  |
+   /  \ ||  :  ||  O  ||  |  ||   [_  |  |      |  |_ ||  :  ||    \|  :  |
+   \    ||     ||     ||  |  ||     | |  |      |     ||     ||  .  \     |
+    \___| \__,_||_____||__|__||_____| |__|      |___,_| \__,_||__|\_|\__,_|");
+
+     println!("                                                     v{}\n", get_version());
 }
