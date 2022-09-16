@@ -53,6 +53,7 @@ module.exports = {
           collapsable: false,
           children: [
             '',
+            'FAQ',
             'upgrades',
           ]
         }
@@ -63,6 +64,7 @@ module.exports = {
           collapsable: false,
           children: [
             '',
+            'FAQ',
             'monitoring',
             'security',
           ]
