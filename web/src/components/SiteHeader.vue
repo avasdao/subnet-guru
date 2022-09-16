@@ -76,7 +76,7 @@
                             </a>
 
                             <a href="javascript://" class="rounded-md px-3 py-2 text-base font-medium text-indigo-50 hover:text-white">
-                                Profile
+                                Disconnect
                             </a>
                         </div>
 
