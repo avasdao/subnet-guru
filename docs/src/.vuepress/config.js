@@ -42,7 +42,7 @@ module.exports = {
         link: '/nodes/'
       },
       {
-        text: 'Open Guru',
+        text: 'My Gurus',
         link: 'https://subnet.guru'
       }
     ],
