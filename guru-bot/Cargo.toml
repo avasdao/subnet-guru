@@ -1,24 +1,26 @@
 [package]
 name = "guru"
-version = "22.9.8"
+version = "22.9.17"
 authors = ["Ava's DAO <support@avasdao.org>"]
-description = "An automated bot for configuring, deploying and managing your Subnets."
+description = "Guru introduces a total solution for Fi+ teams to Design, Build, Test, Deploy and Manage their bespoke Avalanche Subnets."
 homepage = "https://subnet.guru"
 repository = "https://github.com/avasdao/subnet-guru"
 categories = ["subnets", "cryptocurrency"]
 keywords = ["avalanche", "avax", "crypto", "cryptocurrency", "bot", "command-line"]
 readme = "README.md"
-license = "MIT"
+license = "MIT OR Apache-2.0"
 edition = "2018"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [[bin]]
 name = "guru"
 path = "src/guru.rs"
 
 [dependencies]
-clap = { version = "3.0", features = ["derive"] }
+clap = { version = "3.2.22", features = ["derive"] }
 env_logger = "0.9.0"
 indicatif = "0.17.1"
 log = "0.4.17"
+
+[dev-dependencies]
+assert_cmd = "2.0"
+predicates = "2.1"

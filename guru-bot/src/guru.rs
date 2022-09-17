@@ -56,23 +56,13 @@ fn main() {
         }
     }
 
-    // let a = 100;
-    // let b = 200;
-    // println!("\nResult is {}", a + b);
-    // assert_eq!((a + b), 300);
+    let a = 100;
+    let b = 200;
+    println!("  Result is {}\n", a + b);
+    assert_eq!((a + b), 300);
 
-    // let arr:[i32;4] = [1,2,3,4];
-    // println!("\nArray size is {}", arr.len());
-
-    // for i in 0..3 {
-    //     println!("Hi there {}!", i);
-    // }
-
-    // let mut sum = 0.0;
-    // for i in 0..4 {
-    //     sum += i as f64;
-    // }
-    // println!("\nThe sum is {}", sum);
+    let arr:[i32;4] = [1,2,3,4];
+    println!("  Array size is {}\n", arr.len());
 
     let my_sqr = crypto::math::sqr(4.0);
     println!("  Square is {}\n", my_sqr);
@@ -90,7 +80,15 @@ fn main() {
     info!("starting up");
     warn!("oops, nothing implemented!\n");
 
-    utils::remote::start_download();
-    println!("\n");
+    // let node = FederationNode {
+    //     id: String::from("190171ee-ac37-4e05-988b-a7e683c1e5d3"),
+    //     owner: String::from("Shomari"),
+    //     title: String::from("Awesome Node # 1337"),
+    //     createdAt: String::from("Tuesday"),
+    // }
+    // println!("  Node ID is: {}\n", node.get_id);
+
+    // utils::remote::start_download();
+    // println!("\n");
 
 }
