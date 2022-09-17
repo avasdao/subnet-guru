@@ -16,8 +16,29 @@ We aim to to build and deploy a working __Minimum Viable Product__ for an all-NE
 
 Getting started couldn't be ANY easier. __Subnet Validators__ simply run the following command from their local or remote node(s) to download the Guru and begin the installation process:
 
+> __PLEAE NOTE!__ Subnet Guru is currently __ONLY__ available for __Debian__ & __Ubuntu__ systems.  
+Windows and Mac are coming soon...
+
+### Run Guru
+
 ```sh
-curl -sSf https://setup.subnet.guru | sh
+curl -sSf https://run.subnet.guru | sh
+```
+
+### Install Guru
+
+```sh
+# Download Guru
+curl -sSf https://install.subnet.guru -o guru
+
+# Setup Guru
+chmod +x guru
+
+# Install Guru
+sudo mv guru /usr/local/bin/
+
+# Launch Guru
+guru
 ```
 _( __Did you know? —__ Subnet Guru is a FOSS [__Rust__](https://www.rust-lang.org/) application )_
 
@@ -47,3 +68,12 @@ It was of critical importance to us that the communication be as decentralized a
 Security is our first thought and our last thought. IPFS allows us to eliminate ANY possibility of a hacker _(or rogue actor)_ compromising the single point of access to our Guru Portal.
 
 Our primary web portal [__https://subnet.guru__](https://subnet.guru) is powered by [__Cloudflare's Web3 Gateway__](https://www.cloudflare.com/web3/) using [__DNSLink__](https://developers.cloudflare.com/web3/ipfs-gateway/concepts/dnslink/).
+
+
+## What's Next?
+
+Subnet Guru is part of a larger Avalanche Subnet effort called __Subnet Builders ([https://subnet.builders](https://subnet.builders)).__ Our team will continue developing Guru while we work to complete our MVP for Builders.
+
+__On our Roadmap for the remainder of 2022 is to:__
+
+1. Automate the deployment process with CI/CD.

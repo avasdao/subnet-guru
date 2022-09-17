@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+echo
+echo "  Now starting Subnet Guru download..."
+
+curl -sSf https://install.subnet.guru/guru -o guru
+
+echo
+echo "  Download complete."
+
+chmod +x guru
+
+echo
+echo "  Setup complete."
+echo
+echo "  Launching Subnet Guru.."
+
+./guru
+
+rm -rf guru
+echo
+echo "  Subnet Guru has been safely removed from your system."
+echo "  Have a great day!! 😎"
+echo
