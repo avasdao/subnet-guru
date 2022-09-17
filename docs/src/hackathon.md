@@ -1,31 +1,45 @@
 # Avalanche Hacks | Summer 2022
 
-![Avalanche Hacks](./assets/avalanche-hacks.png)
+[![Avalanche Hacks](./assets/avalanche-hacks.png)](https://virtual.avalanchehacks.com)
 
 
 ## Introduction
 
 Subnet Guru is a remote node assistant, built for the sole purpose of making Subnet management effortless from A to Z.
 
+[![App Preview](./assets/app-preview.jpg)](https://subnet.guru/demo.mp4)
+
+( [Click here to play a 3-minute MP4 demo video](https://subnet.guru/demo.mp4) )
+
 
 ## Project Goals
 
+Our team aims to both simplify and expand availability for one of the MOST in-demand products in the entire space, [__Avalanche Subnets__](https://docs.avax.network/subnets).
+
 We aim to to build and deploy a working __Minimum Viable Product__ for an all-NEW virtual assistant, specifically designed to make building and deploying an Avalanche Subnet an effortless experience.
+
+### TOP3 Benefits of Subnet Guru are:
+
+1. A [__genesis file__](https://docs.avax.network/community/tutorials-contest/2022/avax-subnet-customization#creating-a-custom-genesis-file) creation wizard.
+2. A virtual private server (VPS) assistant.
+3. A comprehensive monitoring dashboard.
+
+### But there's sooo much more... Let's get started! 👇
 
 ## 1-2-3 Installation & Setup
 
-Getting started couldn't be ANY easier. __Subnet Validators__ simply run the following command from their local or remote node(s) to download the Guru and begin the installation process:
+Getting started couldn't possibly be any easier. __Subnet Validators__ simply run the following command from their local or remote node(s) to download the Guru and begin the installation process:
 
-> __PLEAE NOTE!__ Subnet Guru is currently __ONLY__ available for __Debian__ & __Ubuntu__ systems.  
+> __PLEASE NOTE!__ Subnet Guru is currently __ONLY__ available for __Debian__ & __Ubuntu__ systems.  
 Windows and Mac are coming soon...
 
-### Run Guru
+### Run Subnet Guru
 
 ```sh
 curl -sSf https://run.subnet.guru | sh
 ```
 
-### Install Guru
+### Install Subnet Guru
 
 ```sh
 # Download Guru
@@ -42,6 +56,28 @@ guru
 ```
 _( __Did you know? —__ Subnet Guru is a FOSS [__Rust__](https://www.rust-lang.org/) application )_
 
+
+### _Guru introduces a total solution for Fi+ teams to Design, Build, Test, Deploy and Manage their bespoke Avalanche Subnets._
+
+## Design
+
+_TBD_
+
+## Build
+
+_TBD_
+
+## Test
+
+_TBD_
+
+## Deploy
+
+_TBD_
+
+## Manage
+
+_TBD_
 
 ## Free and Open Source Software _(FOSS)_
 
@@ -77,3 +113,4 @@ Subnet Guru is part of a larger Avalanche Subnet effort called __Subnet Builders
 __On our Roadmap for the remainder of 2022 is to:__
 
 1. Automate the deployment process with CI/CD.
+2. Add an Access Control List (ACL) via smart contract.
