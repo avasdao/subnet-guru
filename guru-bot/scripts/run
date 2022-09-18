@@ -1,19 +1,16 @@
 #!/usr/bin/env bash
 
 echo
-echo "  Now starting Subnet Guru download..."
+echo "  [1/4] Starting Subnet Guru download..."
 
 curl -sSf https://install.subnet.guru/guru -o guru
 
-echo
-echo "  Download complete."
+echo "  [2/4] Download complete."
 
 chmod +x guru
 
-echo
-echo "  Setup complete."
-echo
-echo "  Launching Subnet Guru.."
+echo "  [3/4] Setup complete."
+echo "  [4/4] Launching Subnet Guru..."
 
 ./guru
 
