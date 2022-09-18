@@ -1,5 +1,16 @@
-pub fn get_version() -> &'static str {
-    return "22.9.16 (alpha)";
+/**
+ * Get Version
+ * 
+ * Retrieves the version from the `Cargo.toml` file.
+ * 
+ * NOTE: Package version is passed as an environment variable to the compiler.
+ */
+pub fn get_version() -> String {
+    /* Retrieve app version from toml. */
+    let version: &str = env!("CARGO_PKG_VERSION");
+
+    /* Return formatted app version. */
+    format!("v{} (alpha)", version)
 }
 
 /**
@@ -16,7 +27,7 @@ pub fn display_banner() {
   /_______  /____/|___  /___|  /\___  >__|    \______  /____/ |__|  |____/ 
           \/          \/     \/     \/               \/                    ");
 
-    println!("                                                      v{}\n", get_version());
+    println!("                                                      {}\n", get_version());
 }
 
 /**
@@ -34,7 +45,7 @@ pub fn display_banner_alt() {
    ███████║╚██████╔╝██████╔╝██║ ╚████║███████╗   ██║       ╚██████╔╝╚██████╔╝██║  ██║╚██████╔╝
    ╚══════╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝   ╚═╝        ╚═════╝  ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ");
 
-    println!("                                                                    v{}\n", get_version());
+    println!("                                                                    {}\n", get_version());
 }
 
 /**
@@ -52,5 +63,5 @@ pub fn display_banner_alt_2() {
    \    ||     ||     ||  |  ||     | |  |      |     ||     ||  .  \     |
     \___| \__,_||_____||__|__||_____| |__|      |___,_| \__,_||__|\_|\__,_|");
 
-     println!("                                                     v{}\n", get_version());
+     println!("                                                     {}\n", get_version());
 }

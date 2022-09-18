@@ -1,8 +1,8 @@
 [package]
 name = "guru"
-version = "22.9.17"
+version = "22.9.18"
 authors = ["Ava's DAO <support@avasdao.org>"]
-description = "Guru introduces a total solution for Fi+ teams to Design, Build, Test, Deploy and Manage their bespoke Avalanche Subnets."
+description = "Subnet Gurus offer a total solution for Fi+ projects to Design, Build, Test, Deploy and Manage their bespoke Avalanche Subnets."
 homepage = "https://subnet.guru"
 repository = "https://github.com/avasdao/subnet-guru"
 categories = ["subnets", "cryptocurrency"]

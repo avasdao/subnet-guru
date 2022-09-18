@@ -125,10 +125,12 @@ fn main() {
         "content": "Hi there!",
     }));
 
+    // panic!("Oops! What happened??");
+
     // utils::remote::start_download();
     // println!("\n");
 
-    get_remote();
+    // get_remote();
 }
 
 #[tokio::main]
