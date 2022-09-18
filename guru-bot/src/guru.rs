@@ -1,11 +1,11 @@
 #![allow(unused)]
 
 /* Import modules. */
+mod artwork;
 mod commander;
 mod crypto;
 mod p2p;
 mod utils;
-mod welcome;
 
 /* Initailize 3rd-party crates. */
 use clap::{Arg, App};
@@ -43,8 +43,8 @@ fn main() {
     /* Setup (human) panic. */
     setup_panic!();
 
-    /* Display (Welcome) banner. */
-    welcome::display_banner();
+    /* Display welcome banner. */
+    artwork::welcome::banner();
 
     // let args = Cli::parse();
     // println!("  (Private) seed phrase is : {}", args.seed_phrase);
@@ -164,7 +164,7 @@ fn main() {
 
     // p2p::ipfs::make_request();
     
-    commander::sys::ping()
+    // commander::sys::ping()
 
     // utils::remote::start_download();
     // println!("\n");

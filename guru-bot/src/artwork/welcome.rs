@@ -1,9 +1,10 @@
 /**
  * Welcome Banner
  * 
- * Prints a welcome banner when the CLI is executed.
+ * This is the default artwork printed as a welcome banner 
+ * when the CLI is executed.
  */
-pub fn display_banner() {
+pub fn banner() {
     println!(r"
     _________    ___.                  __      ________                    
    /   _____/__ _\_ |__   ____   _____/  |_   /  _____/ __ _________ __ __ 
@@ -18,9 +19,9 @@ pub fn display_banner() {
 /**
  * Welcome Banner (Alternate)
  * 
- * Prints a welcome banner when the CLI is executed.
+ * TBD
  */
-pub fn display_banner_alt() {
+pub fn banner_alt() {
     println!(r"
 
    ███████╗██╗   ██╗██████╗ ███╗   ██╗███████╗████████╗     ██████╗ ██╗   ██╗██████╗ ██╗   ██╗
@@ -36,9 +37,9 @@ pub fn display_banner_alt() {
 /**
  * Welcome Banner (Alternate #2)
  * 
- * Prints a welcome banner when the CLI is executed.
+ * TBD
  */
-pub fn display_banner_alt_2() {
+pub fn banner_alt_2() {
     println!(r"
     _____ __ __  ____   ____     ___ ______       ____  __ __  ____  __ __ 
    / ___/|  |  ||    \ |    \   /  _]      |     /    ||  |  ||    \|  |  |
