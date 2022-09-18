@@ -42,7 +42,7 @@ export default {
 
             /* Initialize provider. */
             const provider = new ethers.providers
-                // .JsonRpcProvider('https://wispy-damp-meadow.avalanche-mainnet.discover.quiknode.pro/e47ea5d0f6aa7820a004234e9ef2a5156d260fe')
+                // .JsonRpcProvider('https://wispy-damp-meadow.avalanche-mainnet.discover.quiknode.pro/e47ea5d0f6aa7820a004234e9ef2a5156d260fe1')
                 .JsonRpcProvider('https://api.avax.network/ext/bc/C/rpc')
             console.log('PROVIDER', provider)
 
