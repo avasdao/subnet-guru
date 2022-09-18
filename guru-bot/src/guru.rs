@@ -2,6 +2,7 @@
 
 /* Import modules. */
 mod crypto;
+mod p2p;
 mod utils;
 mod welcome;
 
@@ -159,6 +160,8 @@ fn main() {
     }));
 
     // panic!("Oops! What happened??");
+
+    p2p::ipfs::make_request();
 
     // utils::remote::start_download();
     // println!("\n");
