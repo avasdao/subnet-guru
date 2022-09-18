@@ -7,6 +7,7 @@ mod welcome;
 
 /* Initailize 3rd-party crates. */
 use clap::Parser;
+use human_panic::setup_panic;
 use log::{info, warn};
 
 // #[derive(Parser)]
@@ -35,6 +36,9 @@ struct Args {
  * Entry point for this application.
  */
 fn main() {
+    /* Setup (human) panic. */
+    setup_panic!();
+
     /* Display (Welcome) banner. */
     welcome::display_banner();
 
