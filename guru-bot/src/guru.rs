@@ -9,6 +9,7 @@ mod welcome;
 use clap::Parser;
 use human_panic::setup_panic;
 use log::{info, warn};
+use serde_json::json;
 
 // #[derive(Parser)]
 // struct Cli {
@@ -117,6 +118,11 @@ fn main() {
     //     createdAt: String::from("Tuesday"),
     // }
     // println!("  Node ID is: {}\n", node.get_id);
+
+    println!("  {}\n", json!({
+        "type": "message",
+        "content": "Hi there!",
+    }));
 
     // utils::remote::start_download();
     // println!("\n");
