@@ -10,7 +10,6 @@ use clap::Parser;
 use human_panic::setup_panic;
 use log::{info, warn};
 use serde_json::json;
-use std::collections::HashMap;
 
 // #[derive(Parser)]
 // struct Cli {
@@ -130,16 +129,5 @@ fn main() {
     // utils::remote::start_download();
     // println!("\n");
 
-    // get_remote();
-}
-
-#[tokio::main]
-async fn get_remote() -> Result<(), Box<dyn std::error::Error>> {
-    let resp = reqwest::get("https://httpbin.org/ip")
-        .await?
-        .json::<HashMap<String, String>>()
-        .await?;
-    println!("  {:#?}\n", resp);
-
-    Ok(())
+    utils::remote::get_json();
 }

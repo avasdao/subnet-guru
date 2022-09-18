@@ -1,5 +1,6 @@
 use indicatif::{ProgressBar, ProgressState, ProgressStyle};
 use std::{cmp::min, fmt::Write};
+use std::collections::HashMap;
 use std::thread;
 use std::time::Duration;
 
@@ -26,4 +27,20 @@ pub fn start_download() {
     }
 
     pb.finish_with_message("downloaded");
+}
+
+/**
+ * Get JSON
+ * 
+ * Retrieves JSON from a remote data source over the web.
+ */
+#[tokio::main]
+pub async fn get_json() -> Result<(), Box<dyn std::error::Error>> {
+    let resp = reqwest::get("https://httpbin.org/ip")
+        .await?
+        .json::<HashMap<String, String>>()
+        .await?;
+    println!("{:#?}\n", resp);
+
+    Ok(())
 }
