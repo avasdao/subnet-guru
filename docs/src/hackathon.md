@@ -7,9 +7,9 @@
 
 Subnet Guru is a remote node assistant, built for the sole purpose of making Subnet management effortless from A to Z.
 
-[![App Preview](./assets/app-preview.jpg)](https://subnet.guru/demo.mp4)
+[![App Preview](./assets/app-preview.jpg)](https://subnet.guru/promo.mp4)
 
-( [Click here to play a 3-minute MP4 demo video](https://subnet.guru/demo.mp4) )
+( [Click here to play a 3-minute MP4 demo video](https://subnet.guru/promo.mp4) )
 
 
 ## Project Goals
@@ -114,3 +114,6 @@ __On our Roadmap for the remainder of 2022 is to:__
 
 1. Automate the deployment process with CI/CD.
 2. Add an Access Control List (ACL) via smart contract.
+3. Allow `guru` to run in the background with a `-daemon` flag.
+4. Allow `guru` to run in the background as a `system.service`.
+5. Add "circuit-relay" hole punching to overcome firewalls and NATs.
