@@ -162,10 +162,10 @@ fn main() {
 
     // p2p::ipfs::make_request();
     
+    utils::remote::get_ip();
+
     // commander::sys::ping()
 
     // utils::remote::start_download();
     // println!("\n");
-
-    // utils::remote::get_json();
 }

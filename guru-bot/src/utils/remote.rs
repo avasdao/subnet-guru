@@ -30,12 +30,12 @@ pub fn start_download() {
 }
 
 /**
- * Get JSON
+ * Get IP
  * 
- * Retrieves JSON from a remote data source over the web.
+ * Retrieves IP address from a remote (web) data source.
  */
 #[tokio::main]
-pub async fn get_json() -> Result<(), Box<dyn std::error::Error>> {
+pub async fn get_ip() -> Result<(), Box<dyn std::error::Error>> {
     let resp = reqwest::get("https://httpbin.org/ip")
         .await?
         .json::<HashMap<String, String>>()
