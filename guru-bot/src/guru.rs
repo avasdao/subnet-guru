@@ -1,6 +1,7 @@
 #![allow(unused)]
 
 /* Import modules. */
+mod commander;
 mod crypto;
 mod p2p;
 mod utils;
@@ -161,7 +162,9 @@ fn main() {
 
     // panic!("Oops! What happened??");
 
-    p2p::ipfs::make_request();
+    // p2p::ipfs::make_request();
+    
+    commander::sys::ping()
 
     // utils::remote::start_download();
     // println!("\n");
