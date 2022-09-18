@@ -2,7 +2,7 @@
 name = "guru"
 version = "22.9.18"
 authors = ["Ava's DAO <support@avasdao.org>"]
-description = "Subnet Gurus offer a total solution for Fi+ projects to Design, Build, Test, Deploy and Manage their bespoke Avalanche Subnets."
+description = "Design, Build, Test, Deploy and Manage your bespoke Avalanche Subnets."
 homepage = "https://subnet.guru"
 repository = "https://github.com/avasdao/subnet-guru"
 categories = ["subnets", "cryptocurrency"]

@@ -6,6 +6,7 @@ mod utils;
 mod welcome;
 
 /* Initailize 3rd-party crates. */
+use clap::{Arg, App};
 use clap::Parser;
 use human_panic::setup_panic;
 use log::{info, warn};
@@ -47,11 +48,44 @@ fn main() {
     // println!("  (Private) seed phrase is : {}", args.seed_phrase);
     // println!("     Configuration path is : {}\n", args.config_path.display());
 
-    let args = Args::parse();
+    // let args = Args::parse();
 
-    for _ in 0..args.count {
-        println!("  Hi there {}!\n", args.name)
+    /* Handle application arguments. */
+    let matches = App::new("Subnet Guru")
+        .version(guru::get_version().as_str())
+        .author(env!("CARGO_PKG_AUTHORS"))
+        .about(env!("CARGO_PKG_DESCRIPTION"))
+        .arg(Arg::with_name("seed")
+            .required(false)
+            .takes_value(true)
+            .index(1)
+            .help("12 or 24 word seed phrase"))
+        .arg(Arg::with_name("url")
+            .required(false)
+            .takes_value(true)
+            .index(2)
+            .help("url to download"))
+        .get_matches();
+
+    /* Handle (master) seed. */
+    let seed = matches
+        .value_of("seed")
+        .unwrap_or("");
+    if !seed.is_empty() {
+        println!("  Master seed is [ {} ]\n", seed);
     }
+
+    /* Handle URL. */
+    let url = matches
+        .value_of("url")
+        .unwrap_or("");
+    if !url.is_empty() {
+        println!("  URL is [ {} ]\n", url);
+    }
+
+    // for _ in 0..args.count {
+    //     println!("  Hi there {}!\n", args.name)
+    // }
 
     // let cmd = clap::Command::new("guru")
     // .bin_name("guru")
@@ -129,5 +163,5 @@ fn main() {
     // utils::remote::start_download();
     // println!("\n");
 
-    utils::remote::get_json();
+    // utils::remote::get_json();
 }

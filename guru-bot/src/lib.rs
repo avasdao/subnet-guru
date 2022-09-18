@@ -1,4 +1,19 @@
 /**
+ * Get Version
+ * 
+ * Retrieves the version from the `Cargo.toml` file.
+ * 
+ * NOTE: Package version is passed as an environment variable to the compiler.
+ */
+pub fn get_version() -> String {
+    /* Retrieve app version from toml. */
+    let version: &str = env!("CARGO_PKG_VERSION");
+
+    /* Return formatted app version. */
+    format!("v{} (alpha)", version)
+}
+
+/**
  * Validator
  */
 pub trait Validator {
