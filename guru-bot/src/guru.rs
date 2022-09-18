@@ -1,18 +1,19 @@
 #![allow(unused)]
 
-/* Import modules. */
-mod artwork;
-mod commander;
-mod crypto;
-mod p2p;
-mod utils;
-
-/* Initailize 3rd-party crates. */
+/* Initailize (external) libraries. */
 use clap::{Arg, App};
 use clap::Parser;
 use human_panic::setup_panic;
 use log::{info, warn};
 use serde_json::json;
+
+/* Import modules. */
+mod artwork;
+mod commander;
+mod crypto;
+mod messenger;
+mod p2p;
+mod utils;
 
 // #[derive(Parser)]
 // struct Cli {
@@ -155,10 +156,7 @@ fn main() {
     // }
     // println!("  Node ID is: {}\n", node.get_id);
 
-    println!("  {}\n", json!({
-        "type": "message",
-        "content": "Hi there!",
-    }));
+    messenger::build::json_test();
 
     // panic!("Oops! What happened??");
 
