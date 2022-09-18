@@ -13,6 +13,7 @@ mod commander;
 mod crypto;
 mod messenger;
 mod p2p;
+mod profiles;
 mod utils;
 
 // #[derive(Parser)]
@@ -156,13 +157,17 @@ fn main() {
     // }
     // println!("  Node ID is: {}\n", node.get_id);
 
-    messenger::build::json_test();
+    // messenger::build::json_test();
+
+    profiles::session::new();
+
+    p2p::ipfs::wait_for_request();
 
     // panic!("Oops! What happened??");
 
     // p2p::ipfs::make_request();
     
-    utils::remote::get_ip();
+    // utils::remote::get_ip();
 
     // commander::sys::ping()
 

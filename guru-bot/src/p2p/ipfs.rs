@@ -1,5 +1,6 @@
 use ipfs::{Ipfs, IpfsOptions, IpfsPath, TestTypes, UninitializedIpfs};
 use std::process::exit;
+use std::{thread, time};
 use tokio::io::AsyncWriteExt;
 use tokio_stream::StreamExt;
 
@@ -40,5 +41,19 @@ pub async fn make_request() {
             }
             None => break,
         }
+    }
+}
+
+pub fn wait_for_request() {
+    println!("  Waiting for a remote command...\n");
+
+    /* Start inifinite loop. */
+    loop {
+        let ten_seconds = time::Duration::from_millis(10000);
+        let now = time::Instant::now();
+        
+        thread::sleep(ten_seconds);
+        
+        assert!(now.elapsed() >= ten_seconds);    
     }
 }
