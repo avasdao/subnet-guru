@@ -28,7 +28,7 @@ We aim to to build and deploy a working __Minimum Viable Product__ for an all-NE
 ### TOP3 Benefits of Subnet Guru are:
 
 1. A [__genesis file__](https://docs.avax.network/community/tutorials-contest/2022/avax-subnet-customization#creating-a-custom-genesis-file) creation wizard.
-2. A virtual private server (VPS) assistant.
+2. A [__Subnet__](https://docs.avax.network/subnets) node assistant.
 3. A comprehensive monitoring dashboard.
 
 ### But there's sooo much more... Let's get started! 👇
@@ -77,7 +77,7 @@ Create your `genesis.json` file using a user-friendly, web-based wizard.
 
 ## Build
 
-Easily build your Subnet using the `avalanche-cli` tool -OR- you can build an Avalanche node on the Fuji Testnet.
+Easily build your Subnet using the [`avalanche-cli`](https://github.com/ava-labs/avalanche-cli) tool -OR- you can build an [__Avalanche node__](https://docs.avax.network/nodes/build/run-avalanche-node-manually) on the Fuji Testnet.
 
 [![App Preview](https://subnet.guru/promo-build.jpg)](https://subnet.guru/promo-build.mp4)
 
